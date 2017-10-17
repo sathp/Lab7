@@ -14,15 +14,21 @@
  * Have a look through the Pokemon file to see how we can construct objects, can use member
  * variables of these objects, and use objects of the same type to make our game.
  */
+
 public class Pokemon {
 
+    /** Maximum number of hit points possible. */
+
+    private static final int MAX_HITS = 50;
+
     /**
-     * Number of hit points this Pokemon has.
+     * Number of hit points this Pokémon has.
      * <p>
      * Hit points can be initialized to between 1 and 50 and decrement as the game plays. The game
      * will end once hitPoints drops below 1.
      */
-    int hitPoints;
+
+    int hitPoints = (int) Math.ceil((Math.random() * MAX_HITS));
 
     /**
      * This Pokemon's attack level.
